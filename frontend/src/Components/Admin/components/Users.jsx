@@ -5,6 +5,7 @@ import axios from 'axios';
 import moment from 'moment';
 import { useEffect,useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { home_url } from '../../../../config.js';
 
 export default function Users() {
 
@@ -16,7 +17,7 @@ export default function Users() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/appointments', {
+      const response = await axios.get(`${home_url}/appointments`, {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),

@@ -8,6 +8,7 @@ import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import { Box } from "@mui/system";
 import axios from "axios";
+import { home_url } from "../../../../config.js";
 
 function LoginForm() {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ function LoginForm() {
   const onSubmit = async (values) => {
     // console.log(values);
     try {
-        const response= await axios.post ("http://localhost:8080/doctorsignin",values)
+        const response= await axios.post (`${home_url}/doctorsignin`,values)
         console.log(response.data)
         
         if(response.status===200){

@@ -4,6 +4,7 @@ import axios from 'axios';
 import toast from "react-hot-toast";
 import {useNavigate} from "react-router-dom"
 import { faHandPointLeft } from '@fortawesome/free-solid-svg-icons';
+import { home_url } from '../../../../config.js';
 
 const AmbulanceBooking = () => {
 
@@ -27,7 +28,7 @@ const AmbulanceBooking = () => {
     e.preventDefault();
     console.log(bookingInfo)
      try {
-        const response = await axios.post('http://localhost:8080/patient/ambulance', bookingInfo);
+        const response = await axios.post(`${home_url}/patient/ambulance`, bookingInfo);
         console.log(response)
     if(response.status === 200 ){
     toast.success(response.data.message);

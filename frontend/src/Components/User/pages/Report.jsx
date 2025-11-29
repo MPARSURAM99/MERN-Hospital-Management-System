@@ -14,6 +14,7 @@ import {
   ListItemText,
   Grid,
 } from '@mui/material';
+import { home_url } from '../../../../config.js';
 
 const Report = () => {
   const [datas, setDatas] = useState();
@@ -23,7 +24,7 @@ const Report = () => {
   const doctorDetails = async (id) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8080/patient/single-appointment/${id}`,
+        `${home_url}/patient/single-appointment/${id}`,
         {
           headers: {
             authorization: token,

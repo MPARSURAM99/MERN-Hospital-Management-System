@@ -1,6 +1,7 @@
 import { useEffect,useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import axios from 'axios';
+import { home_url } from '../../../../config.js';
 
 
 export default function Enquery() {
@@ -12,7 +13,7 @@ export default function Enquery() {
   
     const fetchEnquery = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/userquery', {
+        const response = await axios.get(`${home_url}/userquery`, {
           headers: {
             'Content-Type': 'application/json',
             authorization: localStorage.getItem('jwt'),

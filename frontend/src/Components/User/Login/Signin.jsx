@@ -12,6 +12,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import { home_url } from "../../../../config.js";
 
 const theme = createTheme();
 
@@ -47,7 +48,7 @@ function SignUpForm() {
     console.log(values)
     try {
       const response = await axios.post(
-        "http://localhost:8080/signup",
+        `${home_url}/signup`,
 
         values
       );

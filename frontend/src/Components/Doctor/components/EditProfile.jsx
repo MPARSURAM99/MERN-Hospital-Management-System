@@ -5,6 +5,7 @@ import { TextField, Button, Typography, Box } from '@mui/material';
 import { MultiSelect } from "react-multi-select-component";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import toast from 'react-hot-toast';
+import { home_url } from '../../../../config.js';
 // import "./doctor.css"
 
 const options = [
@@ -40,7 +41,7 @@ const AddDoctorForm = () => {
 
   const fetchdoctor=async()=>{
     try {
-        const response= await axios.get('http://localhost:8080/doctor-single',{
+        const response= await axios.get(`${home_url}/doctor-single`,{
             headers: {
 
                 "authorization": localStorage.getItem("jwt")

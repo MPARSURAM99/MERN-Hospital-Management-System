@@ -4,6 +4,7 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { home_url } from '../../../../config.js';
 
 const TOKEN_EXPIRATION_TIME = 5 * 60 * 60 * 1000; // 5 hours in milliseconds
 
@@ -13,7 +14,7 @@ export const loginAsync = createAsyncThunk(
   'login/loginAsync',
   async (credentials, { rejectWithValue }) => {
     try {
-      const response = await axios.post("http://localhost:8080/signin", credentials);
+      const response = await axios.post(`${home_url}/signin`, credentials);
       console.log(response)
       
       if (response.data.token !== undefined) {

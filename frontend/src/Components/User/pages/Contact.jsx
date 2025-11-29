@@ -11,6 +11,7 @@ import { Email, Phone, LocationOn } from '@mui/icons-material';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
+import { home_url } from '../../../../config.js';
 
 const ContactUsPage = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const ContactUsPage = () => {
       message,
       contact,
     };
-    const response = await axios.post('http://localhost:8080/patient/patientmessage', data);
+    const response = await axios.post(`${home_url}/patient/patientmessage`, data);
     if (response.status === 200) {
       toast.success(response.data.message);
       navigate("/");

@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import AddDoctorForm from "./AddDoctor";
 import { Grid, Typography } from "@mui/material";
+import { home_url } from "../../../../config.js";
 
 
 
@@ -43,7 +44,7 @@ const columns = [
        
         try {
           await axios.delete(
-            `http://localhost:8080/doctor/${params.row._id}`,
+            `${home_url}/doctor/${params.row._id}`,
             {
               headers: {
                 "Content-Type": "application/json",

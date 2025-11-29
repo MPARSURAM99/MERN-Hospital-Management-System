@@ -6,6 +6,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import moment from 'moment';
 import toast from 'react-hot-toast';
+import { home_url } from '../../../../config.js';
 
 
 function Report() {
@@ -30,7 +31,7 @@ const [selectedDate, setSelectedDate] = useState(new Date());
 
  const fetchdata = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/single/${id}`, {
+      const response = await axios.get(`${home_url}/single/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),

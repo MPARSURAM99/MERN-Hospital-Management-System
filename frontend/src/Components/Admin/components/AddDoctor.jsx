@@ -6,6 +6,7 @@ import { MultiSelect } from "react-multi-select-component";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import "./doctor.css"
 import toast from 'react-hot-toast';
+import home_url from "../../../../config.js"
 
 const options = [
   { label: "10AM-12PM", value: "10PM-12PM" },
@@ -47,7 +48,7 @@ const AddDoctorForm = ({fetchdata}) => {
     try {
       const doctorData = { name, expertise, image,date,contact,email,password,desc,ammount };
       console.log(doctorData)
-     const response=  await axios.post('http://localhost:8080/doctor', doctorData,{
+     const response=  await axios.post(`${home_url}/doctor`, doctorData,{
         headers: {
             
             "authorization": localStorage.getItem("jwt")

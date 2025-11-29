@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import axios from "axios";
+import { home_url } from "../../../../config.js";
 
 
  const initialState={
@@ -9,7 +10,7 @@ import axios from "axios";
 }
 export const getpatient = createAsyncThunk('getacrt', async () => {
     try {
-      const response = await axios.get('http://localhost:8080/patient',{
+      const response = await axios.get(`${home_url}/patient`,{
         headers: {
             
             "authorization": localStorage.getItem("jwt")

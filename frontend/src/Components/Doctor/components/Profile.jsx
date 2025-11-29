@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Typography, Avatar, Grid, Chip, Box } from '@mui/material';
 import axios from 'axios';
+import { home_url } from '../../../../config.js';
 
 const DoctorProfile = () => {
   const [doctor, setDoctor] = useState({});
 
   const fetchDoctor = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/doctor-single', {
+      const response = await axios.get(`${home_url}/doctor-single`, {
         headers: {
           authorization: localStorage.getItem('jwt'),
         },

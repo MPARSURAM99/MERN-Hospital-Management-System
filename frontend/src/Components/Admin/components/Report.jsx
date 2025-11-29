@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { TextField, Button, Container, Grid, Typography } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { home_url } from '../../../../config.js';
 
 function Report() {
 
@@ -20,7 +21,7 @@ function Report() {
 
  const fetchdata = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/single/${id}`, {
+      const response = await axios.get(`${home_url}/single/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           authorization: localStorage.getItem('jwt'),

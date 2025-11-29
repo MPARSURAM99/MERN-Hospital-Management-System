@@ -18,6 +18,7 @@ import toast from "react-hot-toast";
 
 import { Box } from "@mui/system";
 import { Grid, Typography } from "@mui/material";
+import { home_url } from "../../../../../config.js";
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -53,7 +54,7 @@ export default function Cart() {
   const MakePayment = async (id) => {
     try {
       const response = await axios.post(
-        "http://localhost:8080/patient/payment",
+        `${home_url}/patient/payment`,
         {
           status: "paid",
           _id: id,

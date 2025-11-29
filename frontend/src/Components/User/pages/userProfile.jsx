@@ -19,6 +19,7 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { home_url } from '../../../../config.js';
 
 const UserProfile = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -33,7 +34,7 @@ const UserProfile = () => {
 
   const fetch_user = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/userdetails', {
+      const response = await axios.get(`${home_url}/userdetails`, {
         headers: {
           authorization: localStorage.getItem('jwt'),
         },
