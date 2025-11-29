@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { TextField, Button, Container, Grid, Typography } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { home_url } from '../../../../config.js';
+import { home_url } from '../../../config.js';
 
 function Report() {
 

@@ -18,7 +18,7 @@ import toast from "react-hot-toast";
 
 import { Box } from "@mui/system";
 import { Grid, Typography } from "@mui/material";
-import { home_url } from "../../../../../config.js";
+import { home_url } from "../../../../config.js";
 
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({

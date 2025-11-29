@@ -8,7 +8,7 @@ import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import { Box } from "@mui/system";
 import axios from "axios";
-import { home_url } from "../../../../config.js";
+import { home_url } from "../../../config.js";
 
 function LoginForm() {
   const dispatch = useDispatch();

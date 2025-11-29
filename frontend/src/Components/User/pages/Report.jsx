@@ -14,7 +14,7 @@ import {
   ListItemText,
   Grid,
 } from '@mui/material';
-import { home_url } from '../../../../config.js';
+import { home_url } from '../../../config.js';
 
 const Report = () => {
   const [datas, setDatas] = useState();

@@ -5,7 +5,7 @@ import axios from 'axios';
 import moment from 'moment';
 import { useEffect,useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { home_url } from '../../../../config.js';
+import { home_url } from '../../../config.js';
 
 export default function Users() {
 

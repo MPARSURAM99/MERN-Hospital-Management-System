@@ -1,7 +1,7 @@
 import { useEffect,useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import axios from 'axios';
-import home_url from "../../../../config.js"
+import home_url from "../../../config.js"
 
 
 export default function Enquery() {

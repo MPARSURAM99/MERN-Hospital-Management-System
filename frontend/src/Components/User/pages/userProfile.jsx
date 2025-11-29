@@ -19,7 +19,7 @@ import {
 } from '@mui/material';
 import axios from 'axios';
 import toast from 'react-hot-toast';
-import { home_url } from '../../../../config.js';
+import { home_url } from '../../../config.js';
 
 const UserProfile = () => {
   const [isEditing, setIsEditing] = useState(false);

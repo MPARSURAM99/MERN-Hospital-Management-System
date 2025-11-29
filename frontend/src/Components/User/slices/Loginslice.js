@@ -4,7 +4,7 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { home_url } from '../../../../config.js';
+import { home_url } from '../../../config.js';
 
 const TOKEN_EXPIRATION_TIME = 5 * 60 * 60 * 1000; // 5 hours in milliseconds
 

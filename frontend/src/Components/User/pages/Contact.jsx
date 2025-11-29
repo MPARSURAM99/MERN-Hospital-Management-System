@@ -11,7 +11,7 @@ import { Email, Phone, LocationOn } from '@mui/icons-material';
 import axios from 'axios';
 import { toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import { home_url } from '../../../../config.js';
+import { home_url } from '../../../config.js';
 
 const ContactUsPage = () => {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Typography, Avatar, Grid, Chip, Box } from '@mui/material';
 import axios from 'axios';
-import { home_url } from '../../../../config.js';
+import { home_url } from '../../../config.js';
 
 const DoctorProfile = () => {
   const [doctor, setDoctor] = useState({});

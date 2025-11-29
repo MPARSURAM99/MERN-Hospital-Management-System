@@ -12,7 +12,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import { home_url } from "../../../../config.js";
+import { home_url } from "../../../config.js";
 
 const theme = createTheme();
 

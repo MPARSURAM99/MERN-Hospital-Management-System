@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { Button, TextField } from '@mui/material';
 import axios from 'axios';
-import { home_url } from '../../../../config.js';
+import { home_url } from '../../../config.js';
 
 export default function Users() {
   const [appointments, setAppointments] = useState([]);

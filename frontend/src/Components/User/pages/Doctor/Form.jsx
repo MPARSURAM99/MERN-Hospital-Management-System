@@ -18,7 +18,7 @@ import toast from 'react-hot-toast'
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import "./Form.css"
-import { home_url } from "../../../../../config.js";
+import { home_url } from "../../../../config.js";
 
 const AppointmentForm = () => {
   const [doctor,setDoctor]=useState()

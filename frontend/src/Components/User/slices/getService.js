@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import { home_url } from "../../../../config.js";
+import { home_url } from "../../../config.js";
 
  const initialState={
     service:[],

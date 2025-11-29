@@ -5,7 +5,7 @@ import { TextField, Button, Typography, Box } from '@mui/material';
 import { MultiSelect } from "react-multi-select-component";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import toast from 'react-hot-toast';
-import { home_url } from '../../../../config.js';
+import { home_url } from '../../../config.js';
 // import "./doctor.css"
 
 const options = [
